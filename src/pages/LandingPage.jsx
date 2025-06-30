@@ -85,6 +85,11 @@ const HeroSlider = () => {
     }, 300);
   };
 
+  const handleWatchDemo = () => {
+    // Open YouTube video in a new tab
+    window.open('https://www.youtube.com/watch?v=TQoJ5EpI8gk', '_blank');
+  };
+
   return (
     <div className="relative h-screen overflow-hidden">
       {/* Slides container with infinite loop effect */}
@@ -137,12 +142,13 @@ const HeroSlider = () => {
                           Start Your Journey
                           <ArrowRight className="inline ml-2 w-5 h-5" />
                         </button>
-                        <a href='https://www.youtube.com/watch?v=TQoJ5EpI8gk'>
-                          <button className="border-2 border-white text-white px-8 py-4 font-semibold text-lg hover:bg-white hover:text-gray-900 transition-all duration-300 flex items-center justify-center">
+                        <button 
+                          onClick={handleWatchDemo}
+                          className="border-2 border-white text-white px-8 py-4 font-semibold text-lg hover:bg-white hover:text-gray-900 transition-all duration-300 flex items-center justify-center"
+                        >
                           <Play className="w-5 h-5 mr-2" />
                           Watch Demo
                         </button>
-                        </a>
                       </div>
                     </div>
                   </div>
